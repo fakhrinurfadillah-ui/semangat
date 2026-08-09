@@ -1,0 +1,159 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat!</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff512f, #f09819);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: muncul 1.5s ease;
+        }
+
+        /* Emoji utama */
+        .emoji {
+            font-size: 120px;
+            animation: goyang 1s infinite alternate,
+                       membesar 1.5s infinite ease-in-out;
+            display: block;
+        }
+
+        /* Tulisan */
+        .semangatMPKMB {
+            margin-top: 20px;
+            font-size: 55px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 5px;
+            text-shadow:
+                0 0 10px #fff,
+                0 0 20px #ffeb3b,
+                0 0 40px #ff9800;
+            animation: kedip 1.5s infinite;
+        }
+
+        .subtext {
+            margin-top: 15px;
+            color: white;
+            font-size: 20px;
+            animation: naikTurun 2s infinite ease-in-out;
+        }
+
+        /* Emoji kecil yang melayang */
+        .floating {
+            position: absolute;
+            font-size: 35px;
+            animation: melayang 5s linear infinite;
+        }
+
+        .f1 { left: 10%; animation-delay: 0s; }
+        .f2 { left: 30%; animation-delay: 1s; }
+        .f3 { left: 70%; animation-delay: 2s; }
+        .f4 { left: 90%; animation-delay: 3s; }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: scale(0);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes goyang {
+            from {
+                transform: rotate(-8deg);
+            }
+            to {
+                transform: rotate(8deg);
+            }
+        }
+
+        @keyframes membesar {
+            0%, 100% {
+                scale: 1;
+            }
+            50% {
+                scale: 1.15;
+            }
+        }
+
+        @keyframes kedip {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes naikTurun {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes melayang {
+            0% {
+                bottom: -50px;
+                opacity: 0;
+                transform: rotate(0deg);
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                bottom: 110%;
+                opacity: 0;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Emoji melayang -->
+    <div class="floating f1">🔥</div>
+    <div class="floating f2">💪</div>
+    <div class="floating f3">⭐</div>
+    <div class="floating f4">🔥</div>
+
+    <div class="container">
+        <div class="emoji">💪🔥</div>
+
+        <div class="semangatMPKMB">
+            SEMANGAT MPKMB NYA IKAA!
+        </div>
+
+        <div class="subtext">
+            KAMU KEREN IKAA! ✨
+        </div>
+    </div>
+
+</body>
+</html>
+```
