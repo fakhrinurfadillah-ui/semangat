@@ -1,0 +1,258 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SEMANGAT MPKMB ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:
+                radial-gradient(circle at center,
+                #5c002b 0%,
+                #210016 45%,
+                #080008 100%);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        /* =========================
+           HATI UTAMA
+        ========================= */
+
+        .heart {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background: #ff1744;
+            transform: rotate(-45deg);
+            animation: beat 1s infinite;
+
+            box-shadow:
+                0 0 20px #ff1744,
+                0 0 50px #ff1744,
+                0 0 100px rgba(255, 23, 68, 0.8);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: #ff1744;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -75px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 75px;
+        }
+
+        /* =========================
+           ANIMASI DETAK JANTUNG
+        ========================= */
+
+        @keyframes beat {
+
+            0%, 100% {
+                transform: rotate(-45deg) scale(1);
+            }
+
+            25% {
+                transform: rotate(-45deg) scale(1.15);
+            }
+
+            40% {
+                transform: rotate(-45deg) scale(1);
+            }
+
+            60% {
+                transform: rotate(-45deg) scale(1.12);
+            }
+        }
+
+        /* =========================
+           TEKS EFEK KETIK
+        ========================= */
+
+        .typing {
+            margin-top: 110px;
+
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            text-shadow:
+                0 0 10px #ff1744,
+                0 0 25px #ff1744,
+                0 0 50px #ff1744;
+
+            white-space: nowrap;
+
+            border-right: 3px solid white;
+
+            width: 0;
+
+            overflow: hidden;
+
+            animation:
+                typing 3s steps(13) infinite,
+                cursor 0.7s infinite;
+        }
+
+        @keyframes typing {
+
+            0% {
+                width: 0;
+            }
+
+            40% {
+                width: 13ch;
+            }
+
+            70% {
+                width: 13ch;
+            }
+
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes cursor {
+
+            0%, 100% {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: white;
+            }
+        }
+
+        /* =========================
+           HATI KECIL
+        ========================= */
+
+        .small-heart {
+            position: absolute;
+
+            font-size: 20px;
+
+            opacity: 0;
+
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+
+            0% {
+                transform:
+                    translateY(100px)
+                    scale(0.5)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(-350px)
+                    scale(1.5)
+                    rotate(20deg);
+
+                opacity: 0;
+            }
+        }
+
+        .h1 {
+            left: -150px;
+            animation-delay: 0s;
+        }
+
+        .h2 {
+            left: 130px;
+            animation-delay: 1s;
+        }
+
+        .h3 {
+            left: -220px;
+            animation-delay: 2s;
+        }
+
+        .h4 {
+            left: 210px;
+            animation-delay: 3s;
+        }
+
+        .h5 {
+            left: 0;
+            animation-delay: 1.5s;
+        }
+
+        .h6 {
+            left: 70px;
+            animation-delay: 2.5s;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HATI UTAMA -->
+        <div class="heart"></div>
+
+        <!-- TEKS -->
+        <div class="typing">
+            SEMANGAT MPKMB
+        </div>
+
+        <!-- HATI TERBANG -->
+        <span class="small-heart h1">❤️</span>
+        <span class="small-heart h2">💕</span>
+        <span class="small-heart h3">💗</span>
+        <span class="small-heart h4">❤️</span>
+        <span class="small-heart h5">💖</span>
+        <span class="small-heart h6">💕</span>
+
+    </div>
+
+</body>
+</html>
+```
